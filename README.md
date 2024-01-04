@@ -1,4 +1,4 @@
-# CalculadoraIMC
+# Calculadora IMC
 
 Fiz uma atualização no aplicativo IMC. Nele é possivel colocar os dados em uma tela e o resultado com a mensagem e feito em outra tela. 
 A versão anterior estava em Linear Layout. Atualizei para Constraint Layout.
