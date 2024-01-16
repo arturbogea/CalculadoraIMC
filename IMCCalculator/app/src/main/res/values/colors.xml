@@ -9,6 +9,9 @@
     <color name="primaria">#128b7a</color>
     <color name="primaria_variacao">#006153</color>
     <color name="red">#FF0000</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="orange">#FFA500</color>
+
 
 
 </resources>

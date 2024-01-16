@@ -2,6 +2,7 @@ package com.arturbogea.imccalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import com.arturbogea.imccalculator.databinding.ActivityResultadoBinding
 
 class ResultadoActivity : AppCompatActivity() {
@@ -15,8 +16,6 @@ class ResultadoActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-
-
         resultadoFinal()
 
     }
@@ -26,6 +25,7 @@ class ResultadoActivity : AppCompatActivity() {
         var pesoFinal = binding.textPeso
         var alturaFinal = binding.textAltura
         var mensagem = binding.textResultado
+        var imagem = binding.icon
 
         //abaixo, é para recuperar os valores vindo da outra tela
         val verificar = intent.extras
@@ -42,17 +42,45 @@ class ResultadoActivity : AppCompatActivity() {
 
             val imc = peso / (altura * altura)
 
-            val resultado = when{
-                imc <= 18.5 -> "Abaixo do peso"
-                imc <= 24.9 -> "Peso normal"
-                imc <= 29.9 -> "Acima do peso"
-                imc <= 34.9 -> "Obsidade grau 1"
-                imc <= 39.9 -> "Obesidade grau 2"
-                else -> "Obesidade grau 3"
+            imc.toString()
+
+            when {
+                imc <= 18.5 -> {
+                    mensagem.setText("O seu imc é de ${"%.2f".format(imc)}. Você está abaixo do peso")
+                    mensagem.setTextColor(getColor(R.color.orange))
+                    imagem.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_warnings))
+
+                }
+                imc <= 24.9 -> {
+                    mensagem.setText("O seu imc é de ${"%.2f".format(imc)}. Você está com o peso normal")
+                    mensagem.setTextColor(getColor(R.color.primaria_variacao))
+                    imagem.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_happys))
+                }
+                imc <= 29.9 -> {
+                    mensagem.setText("O seu imc é de ${"%.2f".format(imc)}. Você está acima do peso")
+                    mensagem.setTextColor(getColor(R.color.yellow))
+                    imagem.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_warnings))
+                }
+                imc <= 34.9 -> {
+                    mensagem.setText("O seu imc é de ${"%.2f".format(imc)}. Obsidade grau 1")
+                    mensagem.setTextColor(getColor(R.color.yellow))
+                    imagem.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_warnings))
+                }
+                imc <= 39.9 ->
+                    {
+                    mensagem.setText("O seu imc é de ${"%.2f".format(imc)}. Obsidade grau 2")
+                    mensagem.setTextColor(getColor(R.color.orange))
+                        imagem.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_sensors))
+                }
+                else -> {
+                    mensagem.setText("O seu imc é de ${"%.2f".format(imc)}. Obsidade grau 3")
+                    mensagem.setTextColor(getColor(R.color.red))
+                    imagem.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_medical))
+                }
             }
 
-            imc.toString()
-            mensagem.setText("O seu IMC  está em ${"%.2f".format(imc)}. \n $resultado")
+
+            //mensagem.setText("O seu IMC  está em ${"%.2f".format(imc)}. \n $resultado")
         }
     }
 }

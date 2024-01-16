@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.widget.EditText
+import android.widget.Toast
 import com.arturbogea.imccalculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

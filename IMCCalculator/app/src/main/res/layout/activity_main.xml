@@ -26,7 +26,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:hint=""
+        android:textColorHint="@color/black"
+        android:hint="Digite o seu peso. Ex: 110.50"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +36,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txt_peso"
-            android:hint="Digite o seu peso. Ex: 110.50"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="15dp"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,6 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:hint="Digite a sua altura. Ex: 1.77"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +64,9 @@
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite a sua altura. Ex: 1.77"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="15dp"
             android:background="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
 
