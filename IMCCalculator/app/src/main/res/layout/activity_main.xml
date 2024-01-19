@@ -19,9 +19,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/edit_peso"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -29,46 +29,33 @@
         android:textColorHint="@color/black"
         android:hint="Digite o seu peso. Ex: 110.50"
         android:textColor="@color/black"
+        android:padding="15dp"
+        android:inputType="numberDecimal"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txt_peso"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"
-            android:padding="15dp"
-            android:inputType="numberDecimal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/edit_altura"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:textColorHint="@color/black"
         android:textColor="@color/black"
+        android:layout_marginTop="18dp"
         android:hint="Digite a sua altura. Ex: 1.77"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_peso">
+        android:inputType="numberDecimal"
+        android:padding="15dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/edit_peso"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txt_altura"
-            android:inputType="numberDecimal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"
-            android:padding="15dp"
-            android:background="#FFFFFF" />
-    </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/textView2"

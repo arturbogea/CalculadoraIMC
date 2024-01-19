@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnCalcular.setOnClickListener {
 
-            val peso = binding.txtPeso.text.toString()
-            val altura = binding.txtAltura.text.toString()
+            val peso = binding.editPeso.text.toString()
+            val altura = binding.editAltura.text.toString()
 
             val intent = Intent(this, ResultadoActivity:: class.java)
 
@@ -39,9 +39,12 @@ class MainActivity : AppCompatActivity() {
                 //abaixo, estou jogando os dados do tipo que eu quero para ir os dados para a outra tela
                 intent.putExtra("peso", peso.toDouble())
                 intent.putExtra("altura", altura.toDouble())
+                startActivity(intent)
+            }else{
+                Toast.makeText(this, "Digite os seus dados", Toast.LENGTH_SHORT).show()
             }
 
-            startActivity(intent)
+
         }
 
     }
